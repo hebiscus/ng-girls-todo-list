@@ -19,6 +19,7 @@ export class InputButtonUnitComponent implements OnInit {
   }
 
   changeTitle(newTitle: string): void {
+    console.log(newTitle)
     this.title = newTitle;
   }
 
