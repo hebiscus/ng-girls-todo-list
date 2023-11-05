@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'todo-input-button-unit',
@@ -10,6 +10,16 @@ import { Component } from '@angular/core';
   `,
   styleUrls: ['./input-button-unit.component.scss']
 })
-export class InputButtonUnitComponent {
+export class InputButtonUnitComponent implements OnInit {
+  ngOnInit(): void {
+  }
   title = 'Hello World';
+
+  constructor() { 
+    this.changeTitle('My First Angular App');
+  }
+
+  changeTitle(newTitle: string) {
+    this.title = newTitle;
+  }
 }
