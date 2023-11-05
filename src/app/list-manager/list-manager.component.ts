@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { TodoListService } from '../services/todo-list.service';
+import { Component, OnInit } from '@angular/core';
+import { TodoListService } from '../services/TodoListService';
 import { TodoItem } from '../interfaces/todo-item';
 
 @Component({
@@ -16,12 +16,10 @@ import { TodoItem } from '../interfaces/todo-item';
   `,
   styleUrls: ['./list-manager.component.scss']
 })
-export class ListManagerComponent {
+export class ListManagerComponent implements OnInit {
   todoList: TodoItem[];
 
-  constructor(private todoListService: TodoListService) {
-    todoListService.getTodoList();
-  }
+  constructor(private todoListService: TodoListService) { }
 
   ngOnInit(): void {
     this.todoList = this.todoListService.getTodoList();
