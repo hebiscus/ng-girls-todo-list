@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TodoItem } from '../interfaces/todo-item';
 
 @Component({
   selector: 'todo-todo-item',
@@ -8,5 +9,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./todo-item.component.scss']
 })
 export class TodoItemComponent {
-  @Input() item;
+  @Input() item: TodoItem;
 }
