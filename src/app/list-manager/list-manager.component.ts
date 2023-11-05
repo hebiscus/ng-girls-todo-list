@@ -27,7 +27,7 @@ export class ListManagerComponent {
     this.todoList = this.todoListService.getTodoList();
   }
 
-  addItem(title: string) {    
-    this.todoList.push({ title });
+  addItem(title: string): void {
+    this.todoListService.addItem({ title });
   }
 }
